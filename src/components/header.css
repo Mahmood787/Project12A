@@ -1,0 +1,117 @@
+
+/* -----------------------------------header----------------------------------------- */
+
+.header{
+    height: 70px;
+    width: 100%;
+    background: rgba(255,255,255, .1);
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 2;
+  }
+  .scrolled{
+    box-shadow: 0 2px 34px -27px rgba(90, 124, 160, 0.64);
+    position: fixed;
+    top: -70px;
+    transition: all .7s ease-in-out;
+    transform: translate(0,70px);
+    background:#150e0e;
+  }
+  .top-bar{
+    height: 70px;
+    width: 90%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .right{
+    grid-column: 3;
+    align-content: center;
+    align-self: center;
+    display: flex;
+    align-self: center;
+    margin-bottom: 28px;
+    float: right;
+
+  }
+  .right input{
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: #404040;
+    font-size: 1em;
+    width: 170px;
+    margin-left: 10px;
+  }
+  .top-bar .branding{
+    margin-top:20px;
+    grid-column: 1;
+    align-items: center;
+    position: relative;
+  }
+  .branding h2{
+    color: white
+  }
+  .top-bar ul{
+    grid-column: 2;
+  }
+  .nav li{
+    margin: 30px 0px 20px 20px;
+    display: inline-block;
+  }
+  .nav a{
+    text-decoration: none;
+    color:white;
+  }
+  
+  .right span{
+    font-size: 1.1em;
+    color: white;
+  }
+  .font-icon{
+    display: none;
+  }
+
+@media screen and (max-width: 700px) {
+  .nav{
+    display: none;
+  }
+  .right{
+    display: none;
+  }
+  .top-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+  .branding{
+    grid-column: 1;
+    float: left;
+  }
+  .font-icon {
+    display: block;
+    grid-column: 2;
+    color:white;
+    position: absolute;
+    top: 30%;
+    left: 60%;
+  }
+.font-icon >*{
+  float: right;
+  color:white;
+  
+}
+}
+/* for responsive class */
+@media screen and (max-width: 800px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

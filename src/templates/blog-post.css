@@ -1,0 +1,113 @@
+.container-blog-post{
+    width: 80%;
+    padding-top: 150px;
+    margin: auto;
+}
+.container-blog-post h2{
+    color: rgba(0, 0, 0, 0.7)
+}
+.blog-top p{
+    float: left;
+    color: rgba(0, 0, 0, 0.25);
+}
+.blog-top input{
+    float: right;
+}
+/* top blog content */
+.blog-container{
+    margin-top: 100px;
+    width: 100%;
+    border: 1px  solid rgba(0, 0, 0, 0.25);
+    
+}
+.top-content{
+    margin-top: 50px;
+    justify-content: space-between;
+    display: flex;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.top-content ul li{
+    list-style-type: none;
+    display: inline;
+    padding-right: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+.top-content.pic-sm{
+    width: 100%;
+    height: 100%;  
+    overflow: hidden; 
+}
+.pic-sm{
+    vertical-align: middle;
+
+}
+
+.pic-sm img{
+    width: 32px;
+    height: 32px;  
+    border-radius: 50%; 
+
+}
+.blog-post-content{
+    margin: 30px 100px;
+}
+.blog-post-content p{
+    margin-top: 50px;
+    justify-content: right;
+    word-spacing: 3px;
+    line-height: 40px;
+}
+.blog-post-content-img img{
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+
+/* bottom */
+.line-blog-post{
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.25);
+    margin-top: 100px;
+    margin-bottom: 15px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.line-blog-post2{
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.25);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.social{
+    margin: auto;
+    width: 88%;
+}
+.social > *{
+    margin-left: 35px;
+}
+.last-content{
+    display: flex;
+    justify-content: space-between;
+    width: 82%;
+    margin: auto;
+}
+.views-comment > *{
+    padding-right: 20px;
+    color: rgba(0, 0, 0, 0.45);
+}
+.icon2{
+    display: flex;
+    align-self: baseline;
+}
+.likes-number2{
+    padding-right: 10px;
+}
+.recent-post{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0px   ;
+}
