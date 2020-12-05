@@ -91,7 +91,7 @@ export default function Blogpost({data}:BlogPostTemplateProps)  {
                             <FacebookIcon/>
                             <LinkedInIcon/>
                             <GithubIcon/>
-                            <YoutubeIcon/>
+                            <YouTubeIcon/>
                             <InstagramIcon/>
                         </div>
                         <div className="line-blog-post2"></div>
