@@ -6,9 +6,8 @@ import './blog-post.css'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GithubIcon from '@material-ui/icons/GitHub'
 import InstagramIcon from '@material-ui/icons/Instagram';
-import YoutubeIcon from '@material-ui/icons/Youtube';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import Container from '@material-ui/core/Container';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 import Paper from '@material-ui/core/Paper';
