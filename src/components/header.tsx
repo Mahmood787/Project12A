@@ -5,6 +5,7 @@ import './header.css'
 import Button from '@material-ui/core/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Login from "./auth";
 type Props ={
     siteTitle: string
 }
@@ -31,6 +32,7 @@ const Header = ({ siteTitle }:Props) => {
                     Latest Blogs
                     </Button>
                </Link>              
+                    <Login/>
             </div>
             <a href="#" className="font-icon">
                 <FontAwesomeIcon   icon={faBars} size="2x" />

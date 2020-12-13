@@ -1,5 +1,5 @@
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import React from 'react'
+import React, { useState } from 'react'
 import {GatsbyGraphQLObjectType, graphql, Link, PackageJson} from 'gatsby'
 import Layout from '../components/layout'
 import './blog-post.css' 
@@ -11,6 +11,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 import Paper from '@material-ui/core/Paper';
+import firebase from 'firebase'
 // note > Response of this query will be passed to the props of this component/page
 // noete 2 > our query takes $slug as a filter parameter. This slug is made available to us
 // because we passed it in as a page context in our gatsby-config.js.
@@ -47,6 +48,15 @@ interface BlogPostTemplateProps {
     }
   }}
 export default function Blogpost({data}:BlogPostTemplateProps)  {
+    const [user, setUser]=useState<any>()
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          setUser(user)
+        } else {
+          setUser('')
+        }
+      })
+    
     const theme = {
         spacing: 8,
       }
@@ -78,12 +88,19 @@ export default function Blogpost({data}:BlogPostTemplateProps)  {
                         <div className="blog-post-content-img">
                             <img src={data.contentfulBlogPost.image.fluid.src}/>
                         </div>
+                        {!user ?(
+                            <>
+                            <p>Please Login to read more</p>
+                            </>
+                        ):(
+                        <>
                         <p>{documentToReactComponents(data.contentfulBlogPost.body.json)}</p>
                         <p>1. Create a Budget Plan your budget prior to your trip and then work backwards. If you know you are only wanting to spend $2000 on a trip then do not allow yourself to start planning a trip that requires $1500 worth of flights. Your budget helps you understand how much money needs to be saved before you travel. If you know your traveling style, you can even plan a daily spending budget in order to help you maintain. Try to estimate accommodations, transportation and food. </p>
                         <p>2. Create a Budget Plan your budget prior to your trip and then work backwards. If you know you are only wanting to spend $2000 on a trip then do not allow yourself to start planning a trip that requires $1500 worth of flights. Your budget helps you understand how much money needs to be saved before you travel. If you know your traveling style, you can even plan a daily spending budget in order to help you maintain. Try to estimate accommodations, transportation and food. </p>
                         <p>3. Create a Budget Plan your budget prior to your trip and then work backwards. If you know you are only wanting to spend $2000 on a trip then do not allow yourself to start planning a trip that requires $1500 worth of flights. Your budget helps you understand how much money needs to be saved before you travel. If you know your traveling style, you can even plan a daily spending budget in order to help you maintain. Try to estimate accommodations, transportation and food. </p>
                         <p>4. Create a Budget Plan your budget prior to your trip and then work backwards. If you know you are only wanting to spend $2000 on a trip then do not allow yourself to start planning a trip that requires $1500 worth of flights. Your budget helps you understand how much money needs to be saved before you travel. If you know your traveling style, you can even plan a daily spending budget in order to help you maintain. Try to estimate accommodations, transportation and food. </p>
-
+                        </>
+                        )}
                     </div>
                     <div className="bottom-blog-post">
                         <div className="line-blog-post"></div>

@@ -1,13 +1,21 @@
-import React from "react"
+import firebase from "firebase"
+import React, { useEffect, useState } from "react"
+import Login from "../components/auth"
 import Layout from "../components/layout"
+import fire from './firebase'
 import './index.css'
-const IndexPage = () => (
-  <Layout> 
+
+const IndexPage = () => {
+    
+
+  return(
+  <Layout>
     <div className="container-ind">
       <div className="welcome">
         <h1>Welcome to Tech Blogs</h1>
         <p><span className="lightFont">Striving to help increase Tech workforce by providing professionally written blogs</span></p>
       </div>
+    <Login /> 
       <div className="intro">
         <br/>
         <br/>
@@ -36,5 +44,5 @@ There are many variations of passages of Lorem Ipsum available, but the majority
     </div>  
   </Layout>
 )
-
+}
 export default IndexPage
