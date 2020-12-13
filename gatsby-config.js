@@ -27,7 +27,8 @@ module.exports = {
           messagingSenderId: "130915068735",
           appId: "1:130915068735:web:f05b57f7330546112fc18a"
         },
-      }
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
