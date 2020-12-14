@@ -15,7 +15,6 @@ const IndexPage = () => {
         <h1>Welcome to Tech Blogs</h1>
         <p><span className="lightFont">Striving to help increase Tech workforce by providing professionally written blogs</span></p>
       </div>
-    <Login /> 
       <div className="intro">
         <br/>
         <br/>
